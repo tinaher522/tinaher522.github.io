@@ -10,17 +10,27 @@
     <meta name="copyright" content="John Doe">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://tinaher.xyz/archives/2024/11/index.html">
+    <meta name="description" content="1.1 朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式  先验概率（P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="朴素贝叶斯分类">
+<meta property="og:url" content="https://tinaher.xyz/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.1 朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式  先验概率（P">
 <meta property="og:locale" content="cn_ZH">
+<meta property="og:image" content="https://tinaher.xyz/images/bayes.png">
+<meta property="og:image" content="https://tinaher.xyz/images/bayes2.png">
+<meta property="og:image" content="https://tinaher.xyz/images/bayes3.png">
+<meta property="og:image" content="https://tinaher.xyz/images/bayes4.png">
+<meta property="og:image" content="https://tinaher.xyz/images/bayes5.png">
+<meta property="article:published_time" content="2024-12-09T04:36:27.000Z">
+<meta property="article:modified_time" content="2025-02-16T02:12:29.107Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tinaher.xyz/images/bayes.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
-    <title>提拉&#39;s Studio</title>
+    <title>朴素贝叶斯分类 · 提拉&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -208,6 +218,7 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
+        <body class="post-body">
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -237,7 +248,7 @@
             <a href="/">提拉&#39;s Studio.</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name"></a>
+            <a href="#" class="post-name">朴素贝叶斯分类</a>
         </div>
     </div>
 </header>
@@ -254,20 +265,56 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="">
+            <div class="site-intro" style="    height:50vh;
+">
     <!-- 主页  -->
+    <!-- 404页  -->
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+                朴素贝叶斯分类
+            <!-- 404 -->
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            <!-- 404 -->
         </p>
         <!-- 文章页 meta -->
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                    <div class="post-intro-tags" >
+</div>
+
+                <!-- 文章字数统计 -->
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2024/12/09</span>
+                    <!-- busuanzi -->
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -396,56 +443,70 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
-                <main class="main index-page">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="1-1-朴素贝叶斯分类"><a href="#1-1-朴素贝叶斯分类" class="headerlink" title="1.1 朴素贝叶斯分类"></a>1.1 朴素贝叶斯分类</h3><p>贝叶斯分类是一类分类算法的总称，这类算法以<strong>贝叶斯定理</strong>为基础。而<strong>朴素贝叶斯分类</strong>是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个<strong>前提假设</strong>：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。<br>（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大）</p>
+<p><strong>贝叶斯公式</strong></p>
+<p><img src="/../images/bayes.png"><br><img src="/../images/bayes2.png"></p>
+<p><strong>先验概率（Prior Probability）</strong>：P(A)基于过去的经验认知，对某个事件发生概率的初步估计。<br><strong>后验概率（Posterior Probability）</strong>：P(A|B)表示在特征B已知的情况下，类别A发生的概率。后验概率是基于先验概率和新的证据，通过贝叶斯定理修正后的概率。</p>
+<p>在实际情况中，我们利用贝叶斯算法去判断类别时，往往是基于多个特征，<strong>极大似然估计MLE</strong>是朴素贝叶斯分类模型的简化版，在计算出先验概率和条件概率之后，直接将两者对应乘积。下图中x表示特征，等式表示n个特征情况下是c类别的概率，即条件概率P(B|A)。</p>
+<p><img src="/../images/bayes3.png"></p>
+<p><strong>当特征数据离散时如何求概率</strong>：需要处理数据<br>1.数据离散化：等宽法，等频法，聚类法等。<br>2.假设数据服从正态分布，<br><img src="/../images/bayes4.png"></p>
+<p><strong>贝叶斯分类特点</strong></p>
+<ol>
+<li>属性可以离散，也可以连续。</li>
+<li>数学基础坚实，分类效率稳定。</li>
+<li>对缺失和噪声数据不太敏感。</li>
+<li>属性如果不相关，分类效果很好。</li>
+</ol>
+<p><strong>贝叶斯项目使用</strong><br>sklearn中有3种不同类型的朴素贝叶斯：</p>
+<ol>
+<li>高斯分布型：假定属性&#x2F;特征（连续数据）服从正态分布。</li>
+<li>多项式型：属性&#x2F;特征（离散值）。</li>
+<li>伯努利型：属性&#x2F;特征（只有0和1，即出现过和没出现过）。</li>
+</ol>
+<h3 id="1-2-正态分布"><a href="#1-2-正态分布" class="headerlink" title="1.2 正态分布"></a>1.2 正态分布</h3><p>正态分布也叫高斯分布，可以用来描述自然界和社会生活中的很多现象和事件，因为数据的分布往往都服从正态分布这个规律。它的形状由两个重要因素组成，正态分布的<strong>数学期望平均值μ</strong>和正态分布的<strong>标准差σ</strong>，标准差代表数据的离散程度，标准差越小，这组数就越集中。<br><img src="/../images/bayes5.png"></p>
+<h3 id="1-3-贝叶斯思维"><a href="#1-3-贝叶斯思维" class="headerlink" title="1.3 贝叶斯思维"></a>1.3 贝叶斯思维</h3><p>根据新的信息来不断更新迭代自己的认知，发现自己的偏差，从而作出更符合实际的判断。</p>
+<p>4个重要组成部分：</p>
+<p>1.<strong>先验概率</strong>：在一个事件未发生之前，根据先前的经验产生的主观猜测。<br>2.<strong>新的数据或信息</strong>：这使你决定是否更改先验概率使得一件事情的发生概率更符合新的情况。<br>3.<strong>后验概率</strong>：这由2，即上一条决定。<br>4.<strong>重复迭代</strong>。</p>
+
+    </article>
+    <!-- license -->
+        <div class="license-wrapper">
+            <p>原文链接：<a href="https://tinaher.xyz/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">https://tinaher.xyz/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/</a>
+            <p>发表日期：<a href="https://tinaher.xyz/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">December 9th 2024, 12:36:27 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+        </li>
+        <li class="previous">
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2024/11/08/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%9C%BA%E5%88%B6/" title="监督学习与无监督学习机制">
+                    <div class="prevTitle">监督学习与无监督学习机制</div>
+                </a>
+        </li>
+    </ul>
+    <!-- comment -->
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2024/11/08/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%9C%BA%E5%88%B6/">
-                <span class="abstract-title-text">监督学习与无监督学习机制</span>
-            </a>
-            <div class="abstract-content">
-                1.1 监督学习 Supervised Learning训练数据： 有明确标签(数据集的每个样本的多种特征均有标准答案)输出： 有特定结果导向
-回归算法regression与分类算法classification均属于监督学习机制，其他函数如支持向量机也属于该机制。
-
-回归通过设计的算法输出连续值continuous value，分类输出离散值 discrete value。
-
-1.2 无监督学习 Unsupervised Learning训练数据：无标签或均为同标签 （无标准答案）输出： 无特定结果导向，需要设计算法自行发现数据的规律。
-
-
-聚类算法是无监督学习机制中的一种算法，其他函数...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/11/08">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2024/11/08</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2024/11/05/hello-world/">
-                <span class="abstract-title-text">Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+            
+            <!-- utteranc评论 -->
 
-More info: Writing
-Run server1$ hexo ...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/11/05">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2024/11/05</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    <!-- paginator  -->
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+            
+            
+            
+        </div>
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    <!-- Mathjax -->
 </main>
 
                 <!-- profile -->
@@ -473,6 +534,13 @@ Run server1$ hexo ...
 
         </div>
         <!-- toc -->
+            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">1.1 朴素贝叶斯分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">1.2 正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E7%BB%B4"><span class="toc-number">3.</span> <span class="toc-text">1.3 贝叶斯思维</span></a></li></ol>
+            </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -555,6 +623,7 @@ Run server1$ hexo ...
         <!-- busuanzi -->
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
         <!-- async load share.js -->
+            <script src="/scripts/share.js" async></script>
         <!-- mermaid -->
     </body>
 </html>
