@@ -10,12 +10,12 @@
     <meta name="copyright" content="John Doe">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta name="description" content="1.1 朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式 先验概率（Pr">
+    <meta name="description" content="朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式 先验概率（Prior">
 <meta property="og:type" content="article">
 <meta property="og:title" content="朴素贝叶斯分类">
 <meta property="og:url" content="https://tinaher.xyz/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.1 朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式 先验概率（Pr">
+<meta property="og:description" content="朴素贝叶斯分类贝叶斯分类是一类分类算法的总称，这类算法以贝叶斯定理为基础。而朴素贝叶斯分类是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个前提假设：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大） 贝叶斯公式 先验概率（Prior">
 <meta property="og:locale" content="cn_ZH">
 <meta property="og:image" content="https://tinaher.xyz/images/bayes.png">
 <meta property="og:image" content="https://tinaher.xyz/images/bayes2.png">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://tinaher.xyz/images/bayes4.png">
 <meta property="og:image" content="https://tinaher.xyz/images/bayes5.png">
 <meta property="article:published_time" content="2024-12-09T04:36:27.000Z">
-<meta property="article:modified_time" content="2025-02-16T02:20:31.822Z">
+<meta property="article:modified_time" content="2025-02-16T02:25:43.832Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tinaher.xyz/images/bayes.png">
@@ -445,27 +445,28 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h3 id="1-1-朴素贝叶斯分类"><a href="#1-1-朴素贝叶斯分类" class="headerlink" title="1.1 朴素贝叶斯分类"></a>1.1 朴素贝叶斯分类</h3><p>贝叶斯分类是一类分类算法的总称，这类算法以<strong>贝叶斯定理</strong>为基础。而<strong>朴素贝叶斯分类</strong>是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个<strong>前提假设</strong>：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。<br>（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大）</p>
-<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a><strong>贝叶斯公式</strong></h4><p><img src="/../images/bayes.png"><br><img src="/../images/bayes2.png"></p>
+        <h3 id="朴素贝叶斯分类"><a href="#朴素贝叶斯分类" class="headerlink" title="朴素贝叶斯分类"></a>朴素贝叶斯分类</h3><p>贝叶斯分类是一类分类算法的总称，这类算法以<strong>贝叶斯定理</strong>为基础。而<strong>朴素贝叶斯分类</strong>是贝叶斯分类中最简单与常见的一种分类方法，它与贝叶斯分类的区别点是加了一个<strong>前提假设</strong>：所有的条件对结果都是独立发生作用的，即所有的特征之间相互独立。<br>（比如某人是篮球运动员与某人有运动天赋，这两个特征之间是有关联的，不能算作完全独立。而特征有关联性会导致朴素贝叶斯概率误差较大）</p>
+<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="/../images/bayes.png"><br><img src="/../images/bayes2.png"></p>
 <p><strong>先验概率（Prior Probability）</strong>：P(A)基于过去的经验认知，对某个事件发生概率的初步估计。<br><strong>后验概率（Posterior Probability）</strong>：P(A|B)表示在特征B已知的情况下，类别A发生的概率。后验概率是基于先验概率和新的证据，通过贝叶斯定理修正后的概率。</p>
 <p>在实际情况中，我们利用贝叶斯算法去判断类别时，往往是基于多个特征，<strong>极大似然估计MLE</strong>是朴素贝叶斯分类模型的简化版，在计算出先验概率和条件概率之后，直接将两者对应乘积。下图中x表示特征，等式表示n个特征情况下是c类别的概率，即条件概率P(B|A)。</p>
 <p><img src="/../images/bayes3.png"></p>
-<p><strong>当特征数据离散时如何求概率</strong>：需要处理数据<br>1.数据离散化：等宽法，等频法，聚类法等。<br>2.假设数据服从正态分布，<br><img src="/../images/bayes4.png"></p>
-<p><strong>贝叶斯分类特点</strong></p>
-<ol>
+<p><strong>当特征数据离散时如何求概率</strong>：需要处理数据<br>1.数据离散化：等宽法，等频法，聚类法等。<br>2.假设数据服从正态分布，</p>
+<p><img src="/../images/bayes4.png"></p>
+<h4 id="贝叶斯分类特点"><a href="#贝叶斯分类特点" class="headerlink" title="贝叶斯分类特点"></a>贝叶斯分类特点</h4><ol>
 <li>属性可以离散，也可以连续。</li>
 <li>数学基础坚实，分类效率稳定。</li>
 <li>对缺失和噪声数据不太敏感。</li>
 <li>属性如果不相关，分类效果很好。</li>
 </ol>
-<p><strong>贝叶斯项目使用</strong><br>sklearn中有3种不同类型的朴素贝叶斯：</p>
+<h4 id="贝叶斯项目使用"><a href="#贝叶斯项目使用" class="headerlink" title="贝叶斯项目使用"></a>贝叶斯项目使用</h4><p>sklearn中有3种不同类型的朴素贝叶斯：</p>
 <ol>
 <li>高斯分布型：假定属性&#x2F;特征（连续数据）服从正态分布。</li>
 <li>多项式型：属性&#x2F;特征（离散值）。</li>
 <li>伯努利型：属性&#x2F;特征（只有0和1，即出现过和没出现过）。</li>
 </ol>
-<h3 id="1-2-正态分布"><a href="#1-2-正态分布" class="headerlink" title="1.2 正态分布"></a>1.2 正态分布</h3><p>正态分布也叫高斯分布，可以用来描述自然界和社会生活中的很多现象和事件，因为数据的分布往往都服从正态分布这个规律。它的形状由两个重要因素组成，正态分布的<strong>数学期望平均值μ</strong>和正态分布的<strong>标准差σ</strong>，标准差代表数据的离散程度，标准差越小，这组数就越集中。<br><img src="/../images/bayes5.png"></p>
-<h3 id="1-3-贝叶斯思维"><a href="#1-3-贝叶斯思维" class="headerlink" title="1.3 贝叶斯思维"></a>1.3 贝叶斯思维</h3><p>根据新的信息来不断更新迭代自己的认知，发现自己的偏差，从而作出更符合实际的判断。</p>
+<h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3><p>正态分布也叫高斯分布，可以用来描述自然界和社会生活中的很多现象和事件，因为数据的分布往往都服从正态分布这个规律。它的形状由两个重要因素组成，正态分布的<strong>数学期望平均值μ</strong>和正态分布的<strong>标准差σ</strong>，标准差代表数据的离散程度，标准差越小，这组数就越集中。</p>
+<p><img src="/../images/bayes5.png"></p>
+<h3 id="贝叶斯思维"><a href="#贝叶斯思维" class="headerlink" title="贝叶斯思维"></a>贝叶斯思维</h3><p>根据新的信息来不断更新迭代自己的认知，发现自己的偏差，从而作出更符合实际的判断。</p>
 <p>4个重要组成部分：</p>
 <p>1.<strong>先验概率</strong>：在一个事件未发生之前，根据先前的经验产生的主观猜测。<br>2.<strong>新的数据或信息</strong>：这使你决定是否更改先验概率使得一件事情的发生概率更符合新的情况。<br>3.<strong>后验概率</strong>：这由2，即上一条决定。<br>4.<strong>重复迭代</strong>。</p>
 
@@ -538,7 +539,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">1.1 朴素贝叶斯分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">贝叶斯公式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">1.2 正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E7%BB%B4"><span class="toc-number">3.</span> <span class="toc-text">1.3 贝叶斯思维</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">朴素贝叶斯分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">贝叶斯公式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">贝叶斯分类特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">贝叶斯项目使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%80%9D%E7%BB%B4"><span class="toc-number">3.</span> <span class="toc-text">贝叶斯思维</span></a></li></ol>
             </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
