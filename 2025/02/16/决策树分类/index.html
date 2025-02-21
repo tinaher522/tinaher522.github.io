@@ -18,6 +18,7 @@
 <meta property="og:description" content="决策树基本定义决策树是一种利用树形图进行决策的预测模型，表现出对象属性与对象值的一种映射关系，用于分类和回归任务。它是通过训练数据，采用自顶而下的贪婪算法选择最合适的属性作为节点生成的决策树。 属性选择标准 信息增益 （ID3算法）   信息熵 H(D)用来描述系统信息量的不确定度，越混乱，信息熵越高。H(D|A)表示属性A的情况下的熵值。Gain值表示属性A对于系统统一性作出的贡献值，对比所有属">
 <meta property="og:locale" content="cn_ZH">
 <meta property="og:image" content="https://tinaher.xyz/images/dc1.png">
+<meta property="og:image" content="https://tinaher.xyz/images/dc7.png">
 <meta property="og:image" content="https://tinaher.xyz/images/dc2.png">
 <meta property="og:image" content="https://tinaher.xyz/images/dc3.png">
 <meta property="og:image" content="https://tinaher.xyz/images/dc5.png">
@@ -26,7 +27,7 @@
 <meta property="og:image" content="https://tinaher.xyz/images/regretree.png">
 <meta property="og:image" content="https://tinaher.xyz/images/dc6.png">
 <meta property="article:published_time" content="2025-02-16T02:39:08.000Z">
-<meta property="article:modified_time" content="2025-02-20T14:37:46.726Z">
+<meta property="article:modified_time" content="2025-02-21T01:47:29.093Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tinaher.xyz/images/dc1.png">
@@ -454,6 +455,13 @@
 </ol>
 <p><img src="/../images/dc1.png"></p>
 <p>信息熵 H(D)用来描述系统信息量的不确定度，越混乱，信息熵越高。H(D|A)表示属性A的情况下的熵值。Gain值表示属性A对于系统统一性作出的贡献值，对比所有属性的Gain值，Gain值最高的属性适合做决策树的第一个节点。</p>
+<p><strong>条件熵</strong>：</p>
+<p>eg. 风力weak的情况有8次，风力strong的情况6次。week情况下，8次中有6次出去玩，2次不出去玩。strong的情况下，6次中有3次出去玩，3次不出去玩。<br><img src="/../images/dc7.png"></p>
+<p>根据熵公式，<br>Entroy(weak) &#x3D; -(0.25* $\log_2 0.25$) - （0.75* $\log_2 0.75$）&#x3D; 0.8112781244591328<br>Entroy(strong) &#x3D; -(0.5* $\log_2 0.5$) - （0.5* $\log_2 0.5$）&#x3D;  1.0</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p玩=<span class="number">1</span>/<span class="number">4</span></span><br><span class="line">p不玩=<span class="number">3</span>/<span class="number">4</span></span><br><span class="line">E玩=p玩*math.log(p玩,<span class="number">2</span>)</span><br><span class="line">E不玩=p不玩*math.log(p不玩, <span class="number">2</span>)</span><br><span class="line">E某一属性=-E玩-E不玩</span><br><span class="line"><span class="built_in">print</span>(E某一属性)</span><br></pre></td></tr></table></figure>
+
+
+
 <ol start="2">
 <li>信息增益比率 （C4.5算法）</li>
 </ol>
