@@ -10,17 +10,23 @@
     <meta name="copyright" content="John Doe">
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://tinaher.xyz/archives/2024/11/index.html">
+    <meta name="description" content="k-均值聚类kmeans算法是一种常用的聚类算法，属于无监督学习的一种。KMeans算法的基本原理是通过迭代的方式将数据集划分为K个簇，使得每个簇内的数据点尽可能相似，而不同簇之间的数据点尽可能不同。 具体步骤初始化：随机选择K个数据点作为初始的聚类中心。分配：计算每个数据点到各个聚类中心的距离，将每个数据点分配到距离最近的聚类中心所在的簇。更新：重新计算每个簇的中心点，通常是取该簇所有数据点的均">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kmeans聚类">
+<meta property="og:url" content="https://tinaher.xyz/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="k-均值聚类kmeans算法是一种常用的聚类算法，属于无监督学习的一种。KMeans算法的基本原理是通过迭代的方式将数据集划分为K个簇，使得每个簇内的数据点尽可能相似，而不同簇之间的数据点尽可能不同。 具体步骤初始化：随机选择K个数据点作为初始的聚类中心。分配：计算每个数据点到各个聚类中心的距离，将每个数据点分配到距离最近的聚类中心所在的簇。更新：重新计算每个簇的中心点，通常是取该簇所有数据点的均">
 <meta property="og:locale" content="cn_ZH">
+<meta property="og:image" content="https://tinaher.xyz/images/km.png">
+<meta property="article:published_time" content="2025-02-09T04:36:27.000Z">
+<meta property="article:modified_time" content="2025-02-27T02:16:29.426Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tinaher.xyz/images/km.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
-    <title>提拉&#39;s Studio</title>
+    <title>kmeans聚类 · 提拉&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -208,6 +214,7 @@
             document.write('<script src="/lib/jquery.min.js" />')
         }
     </script>
+        <body class="post-body">
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -237,7 +244,7 @@
             <a href="/">提拉&#39;s Studio.</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name"></a>
+            <a href="#" class="post-name">kmeans聚类</a>
         </div>
     </div>
 </header>
@@ -254,20 +261,56 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="site-intro" style="">
+            <div class="site-intro" style="    height:50vh;
+">
     <!-- 主页  -->
+    <!-- 404页  -->
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+                kmeans聚类
+            <!-- 404 -->
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            <!-- 404 -->
         </p>
         <!-- 文章页 meta -->
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                    <div class="post-intro-tags" >
+</div>
+
+                <!-- 文章字数统计 -->
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2025/02/09</span>
+                    <!-- busuanzi -->
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -396,56 +439,60 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" alt="loading">
             <div class="container container-unloaded">
-                <main class="main index-page">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="k-均值聚类"><a href="#k-均值聚类" class="headerlink" title="k-均值聚类"></a>k-均值聚类</h3><p>kmeans算法是一种常用的聚类算法，属于无监督学习的一种。<br>KMeans算法的基本原理是通过迭代的方式将数据集划分为K个簇，使得每个簇内的数据点尽可能相似，而不同簇之间的数据点尽可能不同。</p>
+<h4 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h4><p><strong>初始化</strong>：随机选择K个数据点作为初始的聚类中心。<br><strong>分配</strong>：计算每个数据点到各个聚类中心的距离，将每个数据点分配到距离最近的聚类中心所在的簇。<br><strong>更新</strong>：重新计算每个簇的中心点，通常是取该簇所有数据点的均值。<br><strong>迭代</strong>：重复步骤2和3，直到聚类中心不再发生变化或达到预设的迭代次数。</p>
+<h4 id="KMeans算法的应用场景和优缺点"><a href="#KMeans算法的应用场景和优缺点" class="headerlink" title="KMeans算法的应用场景和优缺点"></a>KMeans算法的应用场景和优缺点</h4><p>KMeans算法因其简单高效，被广泛应用于数据挖掘、数据分析、异常检测、模式识别等领域。</p>
+<h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><p><strong>简单高效</strong>：实现简单，收敛速度快。<br><strong>应用广泛</strong>：适用于大规模数据集。<br><strong>可解释性强</strong>：结果直观，易于理解。</p>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p><strong>对初始值敏感</strong>：初始聚类中心的选择会影响最终结果。<br><strong>可能陷入局部最优</strong>：算法容易陷入局部最优解而非全局最优解。<br><strong>需要预先指定K值</strong>：K值的选取对结果有较大影响，通常需要根据经验或多次试验来确定。</p>
+<h4 id="KMeans算法的改进方法"><a href="#KMeans算法的改进方法" class="headerlink" title="KMeans算法的改进方法"></a>KMeans算法的改进方法</h4><p><strong>K值选择</strong>：可以通过肘部法则、轮廓系数等方法来确定最佳的K值。<br><strong>初始化方法</strong>：采用K-Means++算法来优化初始聚类中心的选择，避免随机选择带来的不稳定因素。<br><strong>处理空簇</strong>：在迭代过程中检查并处理空簇，确保每个簇至少包含一个数据点。</p>
+<h3 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例数据</span></span><br><span class="line">X = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">0</span>],</span><br><span class="line">              [<span class="number">10</span>, <span class="number">2</span>], [<span class="number">10</span>, <span class="number">4</span>], [<span class="number">10</span>, <span class="number">0</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建KMeans实例，设置簇的数量为2</span></span><br><span class="line">kmeans = KMeans(n_clusters=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拟合模型</span></span><br><span class="line">kmeans.fit(X)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 预测簇标签</span></span><br><span class="line">labels = kmeans.predict(X)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;簇标签：&quot;</span>, labels)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取簇中心点</span></span><br><span class="line">centroids = kmeans.cluster_centers_</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;簇中心点：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(centroids)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>输出结果</strong>：</p>
+<p><img src="/../images/km.png"></p>
+
+    </article>
+    <!-- license -->
+        <div class="license-wrapper">
+            <p>原文链接：<a href="https://tinaher.xyz/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">https://tinaher.xyz/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/</a>
+            <p>发表日期：<a href="https://tinaher.xyz/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">February 9th 2025, 12:36:27 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2025/02/16/%E5%86%B3%E7%AD%96%E6%A0%91%E5%88%86%E7%B1%BB/" title="决策树分类">
+                    <div class="nextTitle">决策树分类</div>
+                </a>
+        </li>
+        <li class="previous">
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2024/12/09/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="朴素贝叶斯分类">
+                    <div class="prevTitle">朴素贝叶斯分类</div>
+                </a>
+        </li>
+    </ul>
+    <!-- comment -->
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2024/11/08/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%9C%BA%E5%88%B6/">
-                <span class="abstract-title-text">监督学习与无监督学习机制</span>
-            </a>
-            <div class="abstract-content">
-                1.1 监督学习 Supervised Learning训练数据： 有明确标签(数据集的每个样本的多种特征均有标准答案)输出： 有特定结果导向
-回归算法regression与分类算法classification均属于监督学习机制，其他函数如支持向量机也属于该机制。
-
-回归通过设计的算法输出连续值continuous value，分类输出离散值 discrete value。
-
-1.2 无监督学习 Unsupervised Learning训练数据：无标签或均为同标签 （无标准答案）输出： 无特定结果导向，需要设计算法自行发现数据的规律。
-
-
-聚类算法是无监督学习机制中的一种算法，其他函数...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/11/08">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2024/11/08</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
             
-        <article class="index-post">
-            <a class="abstract-title" href="/2024/11/05/hello-world/">
-                <span class="abstract-title-text">Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+            
+            <!-- utteranc评论 -->
 
-More info: Writing
-Run server1$ hexo ...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/11/05">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2024/11/05</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    <!-- paginator  -->
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+            
+            
+            
+        </div>
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    <!-- Mathjax -->
 </main>
 
                 <!-- profile -->
@@ -473,6 +520,13 @@ Run server1$ hexo ...
 
         </div>
         <!-- toc -->
+            <div class="toc-wrapper toc-wrapper-loding" style=    top:50vh;
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">k-均值聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.</span> <span class="toc-text">具体步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KMeans%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%92%8C%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">KMeans算法的应用场景和优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">优点：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">缺点：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KMeans%E7%AE%97%E6%B3%95%E7%9A%84%E6%94%B9%E8%BF%9B%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">KMeans算法的改进方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">代码实例</span></a></li></ol>
+            </div>
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -568,6 +622,7 @@ Run server1$ hexo ...
         <!-- busuanzi -->
             <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
         <!-- async load share.js -->
+            <script src="/scripts/share.js" async></script>
         <!-- mermaid -->
     </body>
 </html>
