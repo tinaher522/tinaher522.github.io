@@ -399,19 +399,39 @@
                 <main class="main index-page">
             
         <article class="index-post">
-            <a class="abstract-title" href="/2025/07/03/code/">
-                <span class="abstract-title-text">[Untitled Post]</span>
+            <a class="abstract-title" href="/2025/06/17/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                <span class="abstract-title-text">大模型知识点</span>
             </a>
             <div class="abstract-content">
-                graph TD    subgraph Encoder[“编码器 (Encoder)”]        direction LR        A[输入(e.g., “我爱机器”)] –&gt; B(1. 输入嵌入+位置编码)        B –&gt; C{N x}        subgraph EncoderBlock[“编码器层 (Encoder Layer)”]            direction TB            C_In(上一层的输出) –&gt; C1(多头自注意力“我该关注谁?”)            C1 –&gt; C2(Add &amp; N...
+                大模型幻觉 （Model hallucination)大模型幻觉指模型生成的内容存在不符合现实事实（事实性幻觉）或偏离用户指令&#x2F;上下文（忠实性幻觉）的现象。
+
+事实性幻觉
+
+工作流程
+大模型的核心运行机制
+数据输入处理的数学表达
+
+
+
+模型核心结构解析（以GPT为例）
+
+
+
+生成过程：概率采样技术
+
+12345# 简化版生成逻辑for step in range(100):    next_word_probs = model.predict(current_tokens)  # 计算概率分布    chosen_token = sample(next_word_probs, ...
             </div>
             <!-- read more -->
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/07/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/07/03</span>
+                <div class="abstract-date" title="Last updated: 2025/07/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/06/17</span>
                 </div>
                 <!-- tags -->
+                    <div class="abstract-tags" >
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人学习笔记">个人学习笔记</a>
+</div>
+
             </div>
         </article>
         <div class="index-post-divider"></div>
@@ -445,44 +465,6 @@
                 <!-- tags -->
                     <div class="abstract-tags" >
         <a class="post-tag" href="javascript:void(0);" data-tags="个人学习笔记，知乎AI大模型应用开发实战训练营">个人学习笔记，知乎AI大模型应用开发实战训练营</a>
-</div>
-
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/06/17/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E7%82%B9/">
-                <span class="abstract-title-text">大模型知识点</span>
-            </a>
-            <div class="abstract-content">
-                大模型幻觉 （Model hallucination)大模型幻觉指模型生成的内容存在不符合现实事实（事实性幻觉）或偏离用户指令&#x2F;上下文（忠实性幻觉）的现象。
-
-事实性幻觉
-
-工作流程
-大模型的核心运行机制
-数据输入处理的数学表达
-
-
-
-模型核心结构解析（以GPT为例）
-
-
-
-生成过程：概率采样技术
-
-12345# 简化版生成逻辑for step in range(100):    next_word_probs = model.predict(current_tokens)  # 计算概率分布    chosen_token = sample(next_word_probs, ...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/07/16">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/06/17</span>
-                </div>
-                <!-- tags -->
-                    <div class="abstract-tags" >
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人学习笔记">个人学习笔记</a>
 </div>
 
             </div>
@@ -550,6 +532,26 @@ eg. 风力weak的情况有8次，风力strong的情况6次。week情况下，8�
         <div class="index-post-divider"></div>
             
         <article class="index-post">
+            <a class="abstract-title" href="/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">
+                <span class="abstract-title-text">kmeans聚类</span>
+            </a>
+            <div class="abstract-content">
+                k-均值聚类kmeans算法是一种常用的聚类算法，属于无监督学习的一种。KMeans算法的基本原理是通过迭代的方式将数据集划分为K个簇，使得每个簇内的数据点尽可能相似，而不同簇之间的数据点尽可能不同。
+具体步骤初始化：随机选择K个数据点作为初始的聚类中心。分配：计算每个数据点到各个聚类中心的距离，将每个数据点分配到距离最近的聚类中心所在的簇。更新：重新计算每个簇的中心点，通常是取该簇所有数据点的均值。迭代：重复步骤2和3，直到聚类中心不再发生变化或达到预设的迭代次数。
+KMeans算法的应用场景和优缺点KMeans算法因其简单高效，被广泛应用于数据挖掘、数据分析、异常检测、模式识别等领域...
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2025/02/27">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/02/09</span>
+                </div>
+                <!-- tags -->
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
+        <article class="index-post">
             <a class="abstract-title" href="/2025/02/09/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
                 <span class="abstract-title-text">线性回归与逻辑回归</span>
             </a>
@@ -569,26 +571,6 @@ MAE：模型离离群值较远，但离大多数其他数据点较近。
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date" title="Last updated: 2025/03/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/02/09</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">
-                <span class="abstract-title-text">kmeans聚类</span>
-            </a>
-            <div class="abstract-content">
-                k-均值聚类kmeans算法是一种常用的聚类算法，属于无监督学习的一种。KMeans算法的基本原理是通过迭代的方式将数据集划分为K个簇，使得每个簇内的数据点尽可能相似，而不同簇之间的数据点尽可能不同。
-具体步骤初始化：随机选择K个数据点作为初始的聚类中心。分配：计算每个数据点到各个聚类中心的距离，将每个数据点分配到距离最近的聚类中心所在的簇。更新：重新计算每个簇的中心点，通常是取该簇所有数据点的均值。迭代：重复步骤2和3，直到聚类中心不再发生变化或达到预设的迭代次数。
-KMeans算法的应用场景和优缺点KMeans算法因其简单高效，被广泛应用于数据挖掘、数据分析、异常检测、模式识别等领域...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2025/02/27">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2025/02/09</span>
                 </div>
                 <!-- tags -->
@@ -710,10 +692,9 @@ Run server1$ hexo ...
         
         
         
-        
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 9
         </div>
         <!-- search  -->
     </div>
@@ -721,16 +702,12 @@ Run server1$ hexo ...
             <div class="archive-year"> 2025 </div>
             <ul class="year-list">
         <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/2025/07/03/code/">[Untitled Post]</a>
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2025/06/17/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E7%82%B9/">大模型知识点</a>
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">06/17</span>
             <a class="archive-post-title" href="/2025/06/17/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%8F%8AAPI%E4%BD%BF%E7%94%A8/">AI大模型基本原理及API使用</a>
-        </li>
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/17</span>
-            <a class="archive-post-title" href="/2025/06/17/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9F%A5%E8%AF%86%E7%82%B9/">大模型知识点</a>
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">06/17</span>
@@ -742,11 +719,11 @@ Run server1$ hexo ...
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">02/09</span>
-            <a class="archive-post-title" href="/2025/02/09/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">线性回归与逻辑回归</a>
+            <a class="archive-post-title" href="/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">kmeans聚类</a>
         </li>
         <li class="archive-post-item">
             <span class="archive-post-date">02/09</span>
-            <a class="archive-post-title" href="/2025/02/09/k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">kmeans聚类</a>
+            <a class="archive-post-title" href="/2025/02/09/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">线性回归与逻辑回归</a>
         </li>
                 </ul>
             <div class="archive-year"> 2024 </div>
@@ -769,13 +746,13 @@ Run server1$ hexo ...
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
-            <span class="sidebar-tag-name" data-tags="个人学习笔记，知乎AI大模型应用开发实战训练营">
-                <span class="iconfont-archer">&#xe606;</span>
-                个人学习笔记，知乎AI大模型应用开发实战训练营
-            </span>
             <span class="sidebar-tag-name" data-tags="个人学习笔记">
                 <span class="iconfont-archer">&#xe606;</span>
                 个人学习笔记
+            </span>
+            <span class="sidebar-tag-name" data-tags="个人学习笔记，知乎AI大模型应用开发实战训练营">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人学习笔记，知乎AI大模型应用开发实战训练营
             </span>
             <span class="sidebar-tag-name" data-tags="个人学习笔记，理解语言模型，O‘Reilly生成式AI原理与实战">
                 <span class="iconfont-archer">&#xe606;</span>
